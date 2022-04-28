@@ -15,7 +15,7 @@ export default function App() {
     if(running){
       timer = setInterval(() => {
          settime(old => old +1)
-      }, 1000);
+      }, 100);
     } 
     return () => {
       if(timer){
@@ -35,7 +35,7 @@ export default function App() {
 
   //create another function to toggle command
   const ToggleRun =() => {
-    setrunning(running)
+    setrunning(!running)
   }
   
   const reset = () =>{
@@ -51,14 +51,17 @@ export default function App() {
       <View style ={styles.inside}>
       <Button style={styles.button1}  onPress={Increment} title='+'/>
       <Button style={styles.button2}  onPress={Decrement} title='-'/>
-      {num> 0 &&
-      <MostrarTemp tempo={Math.round(tempo/NumerVolta)} />  } 
+      
+      {num> 0 && 
+      <MostrarTemp tempo={Math.round(time/num)} />  
+      } 
+
       <Button onPress={ToggleRun} title={running ? 'Pausar':'Iniciar'} />
       <Button onPress={reset} title='Reiniciar'/>
       </View>
 
     
-         
+      
     </View>
   );
 }
