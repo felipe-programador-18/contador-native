@@ -1,13 +1,13 @@
 import React from 'react'
-
+import {Text} from 'react-native'
 const MostrarVoltas = (props) => {
-  return(
-      <p>
+  return(<>
+      <Text>
           <span>{props.voltas}</span>
-         <br/>
+          <br/>
           Voltas
-      </p>
-  )
+      </Text>
+  </>)
 }
 
 export default MostrarVoltas
