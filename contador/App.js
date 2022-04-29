@@ -47,7 +47,7 @@ export default function App() {
 
   return (
     <View style={styles.container}>
-     <MostrarVoltas voltas={num}/>
+     <MostrarVoltas  voltas={num}/>
       <View style ={styles.inside}>
       <Button style={styles.button1}  onPress={Increment} title='+'/>
       <Button style={styles.button2}  onPress={Decrement} title='-'/>
@@ -69,9 +69,11 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#312A28',
+    backgroundColor: '#7FCF25',
     alignItems: 'center',
     justifyContent: 'center',
+    color :'red',
+    
   },
    inside:{
    margin:150
